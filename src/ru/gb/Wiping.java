@@ -1,5 +1,8 @@
 package ru.gb;
 
+/**
+ * Интерфейс мойки автомобиля
+ */
 public interface Wiping {
     /** Протирка зеркал */
     void wipMirrors();

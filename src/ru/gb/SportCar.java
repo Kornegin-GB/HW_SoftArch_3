@@ -2,6 +2,9 @@ package ru.gb;
 
 import java.awt.Color;
 
+/**
+ * Класс трицикла спорткара
+ */
 public class SportCar extends Car implements Fueling, Wiping {
 
     public SportCar(String make, String model, Color color, FuelType fuelType) {
