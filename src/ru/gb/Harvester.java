@@ -6,15 +6,18 @@ import java.awt.Color;
  * Класс уборочная машина
  */
 public class Harvester extends Car implements Fueling, Wiping {
-    private Refueling refueling;
 
-    public Harvester(String make, String model, Color color) {
-        super(make, model, color);
+    public Harvester(String make, String model, Color color, FuelType fuelType) {
+        super(make, model, color, fuelType);
         setWheelsCount(6);
     }
 
     public void setRefuelingStation(RefuelingStation refuelingStation) {
         this.refueling = refuelingStation;
+    }
+
+    public void setWiping(Wiping wiping) {
+        this.wiping = wiping;
     }
 
     @Override
@@ -56,16 +59,19 @@ public class Harvester extends Car implements Fueling, Wiping {
 
     @Override
     public void wipMirrors() {
-
+        wiping.wipMirrors();
     }
 
     @Override
     public void wipWindshield() {
-
+        wiping.wipWindshield();
     }
 
     @Override
     public void wipHeadLights() {
-
+        wiping.wipHeadLights();
     }
+
+    private Refueling refueling;
+    private Wiping wiping;
 }

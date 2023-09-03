@@ -7,10 +7,11 @@ import java.awt.Color;
  */
 public abstract class Car {
 
-    public Car(String make, String model, Color color) {
+    public Car(String make, String model, Color color, FuelType fuelType) {
         this.make = make;
         this.model = model;
         this.color = color;
+        this.fuelType = fuelType;
     }
 
     /** Метод отвечающий за движение автомобиля */

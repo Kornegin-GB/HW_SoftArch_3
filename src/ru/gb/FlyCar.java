@@ -7,11 +7,12 @@ import java.awt.Color;
  */
 public class FlyCar extends Car {
 
-    public FlyCar(String make, String model, Color color) {
-        super(make, model, color);
+    public FlyCar(String make, String model, Color color, FuelType fuelType) {
+        super(make, model, color, fuelType);
         setWheelsCount(4);
     }
 
+    /** Метод полёта автомобиля */
     public void fly() {
         System.out.println("Автомобиль летит!");
     }
